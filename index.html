@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ng-js-boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="NG6-Starter by @AngularClass">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <base href="/">
+  </head>
+  <body ng-app="app" ng-strict-di ng-cloak>
+
+    <!-- Our app entry point, everything will be generated here-->
+    <div ui-view></div>
+    <noscript>
+      <div>
+        <h2>To work with the site requires JavaScript support.</h2>
+        <div>
+          To use all the features of the site, download and install one of these browsers:
+          <a href='https://www.google.com/chrome/browser/desktop/index.html' target='_blank'>Chrome</a>
+          <a href='https://www.mozilla.org/en-US/firefox/products/' target='_blank'>Firefox</a>
+        </div>
+      </div>
+    </noscript>
+
+    <script src='/dll/dll.vendor_libs.js'></script>
+    <script async src='/static/bundle.js'></script>
+  </body>
+</html>

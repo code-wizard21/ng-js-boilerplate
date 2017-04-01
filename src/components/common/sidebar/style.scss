@@ -1,0 +1,67 @@
+@import '../../../styles/colors';
+.sidebar-component {
+  height: 100%;
+  background: $sidebar;
+  width: 240px;
+  color: $sidebar-color;
+
+  .toolbar {
+    background: $sidebar !important;
+    height: auto !important;
+    min-height: inherit !important;
+    max-height: inherit !important;
+
+    .user-info {
+      height: 90px;
+      padding: 15px;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.09);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+      .user-info__info {
+        display: inline-block;
+        font-size: 15px;
+        width: calc(100% - 45px);
+        float: right;
+        padding: 0 15px;
+
+        p {
+          margin: 0 0 10px 0;
+        }
+      }
+
+      .user-info__avatar {
+        background: #fff url('../../../images/user.png');
+        border: 1px solid #fff;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        display: inline-block;
+        background-size: cover;
+        transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+      }
+    }
+  }
+
+  .brand {
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    background: $sidebar;
+    cursor: pointer;
+    background: $brand-color;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+    h1 {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      font-size: 24px;
+      opacity: 0.7;
+      align-items: center;
+      line-height: 1;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import './colors';
+
+@import '../../node_modules/angular-material/modules/scss/angular-material';
+@import '../../node_modules/angular-material-icons/angular-material-icons.css';
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+*, *:hover, *:focus, *.active {
+  text-decoration: none;
+  outline: none;
+  list-style-type: none;
+}
+
+$gray: #eee;
+
+.app {
+  height: 100vh;
+  width: 100vw;
+}
+
+md-content.md-default-theme {
+  background-color: $gray;
+}
+md-card {
+  background-color: #fff;
+  h2:first-of-type {
+    margin-top: 0;
+  }
+}
+md-toolbar {
+  .md-button.md-default-theme {
+    border-radius: 99%; // round toolbar buttons
+  }
+}
+h2 {
+  font-weight: 400;
+}
+.md-toolbar-tools-bottom {
+  font-size: small;
+  & :last-child {
+    opacity: 0.8;
+  }
+}
+md-toolbar:not(.md-hue-1),
+.md-fab {
+  fill: #fff;
+}
+md-sidenav {
+  fill: #737373;
+  ng-md-icon {
+    position: relative;
+    top: 5px; // adjust for svg viewbox
+  }
+}
+.user-avatar {
+  border-radius: 99%;
+}
