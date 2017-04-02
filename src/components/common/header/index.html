@@ -1,30 +1,49 @@
-<div  class="header-component">
+<div class="header-component">
   <md-toolbar class="header">
     <div class="md-toolbar-tools">
-      <md-button class="md-icon-button" ng-click="toggleSidenav('left')" aria-label="Menu">
+      <md-button class="md-icon-button" hide-gt-md ng-click="self.toggleSidebar('left')" aria-label="Menu">
         <ng-md-icon icon="menu"></ng-md-icon>
       </md-button>
-      <h3>
-        Dashboard
-      </h3>
+      <h3>{{self.headerTitlePage}}</h3>
       <span flex></span>
-      <md-button class="md-icon-button" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
-        <ng-md-icon icon="language"></ng-md-icon>
-      </md-button>
-      <md-button class="md-icon-button" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
+      <md-menu>
+        <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="self.openMenu($mdMenu, $event)">
+          <ng-md-icon icon="language"></ng-md-icon>
+        </md-button>
+        <md-menu-content width="4" class="language-menu">
+          <md-menu-item ng-repeat="item in self.lenguage">
+            <md-button ng-class="{'active-btn-header-language': item.name === self.$translate.use()}" ng-click="self.changeLanguage(item.name)">
+              {{item.label}}
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+      <md-button class="md-icon-button" aria-label="Open Settings" ng-click="self.toggleFullScreen()">
         <ng-md-icon icon="settings_overscan"></ng-md-icon>
       </md-button>
-      <md-button class="md-icon-button" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
-        <ng-md-icon icon="apps"></ng-md-icon>
-      </md-button>
+      <md-menu>
+        <md-button class="md-icon-button" aria-label="Open Settings" ng-click="self.openMenu($mdMenu, $event)">
+          <ng-md-icon icon="apps"></ng-md-icon>
+        </md-button>
+        <md-menu-content class="tools-menu" width="4">
+          <md-menu-item>
+            <md-button>
+              <a class="tools-menu-link" ui-sref="app.profile">Profile</a>
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button>
+              <a class="tools-menu-link" ui-sref="app.settings">Settings</a>
+            </md-button>
+          </md-menu-item>
+          <md-menu-divider></md-menu-divider>
+          <md-menu-item>
+            <md-button>
+              <a class="tools-menu-link" ui-sref="app.logout">Logout</a>
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
     </div>
   </md-toolbar>
-  <div class="sub-header">
-    <div class="history">
-      <span>Home</span>
-    </div>
-    <md-button class="help-btn md-icon-button" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
-      <ng-md-icon icon="help_outline"></ng-md-icon>
-    </md-button>
-  </div>
 </div>

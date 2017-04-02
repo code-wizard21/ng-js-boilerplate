@@ -93,6 +93,7 @@ module.exports = function () {
               minimize: true
             }
           }],
+          exclude: [/node_modules/]
         },
         {
           test: /\.js$/,

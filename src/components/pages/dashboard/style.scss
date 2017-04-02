@@ -1,0 +1,18 @@
+@import '../../../styles/colors';
+.dashboard-component {
+  .sub-header {
+    background: $sub-header;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    color: $header-color;
+    .history {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+    }
+    .delimiter {
+      margin: 0 5px;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import template from './index.html'
 import controller from './controller'
 import './style'
 
-let headerComponent = {
+let dashboardComponent = {
   restrict: 'EA',
   replace: true,
   scope: true,
@@ -10,4 +10,5 @@ let headerComponent = {
   controllerAs: 'self',
   controller
 }
-export default headerComponent
+
+export default dashboardComponent

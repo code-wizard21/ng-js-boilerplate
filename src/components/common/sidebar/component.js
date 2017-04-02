@@ -3,11 +3,12 @@ import controller from './controller'
 import './style'
 
 let sidebarComponent = {
-  restrict: 'E',
-  bindings: {},
+  restrict: 'EA',
+  replace: true,
+  scope: true,
   template,
-  controller,
-  controllerAs: 'vm'
+  controllerAs: 'self',
+  controller
 }
 
 export default sidebarComponent

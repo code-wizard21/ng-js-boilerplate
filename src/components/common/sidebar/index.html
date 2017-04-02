@@ -2,30 +2,42 @@
   <md-toolbar class="md-tall md-hue-2 toolbar">
     <div>
       <div class="brand">
-        <h1>NG-boilerplate</h1>
+        <a ui-sref="app.users"><h1  translate="Sidebar.BRAND_HEADER"></h1></a>
       </div>
       <user-avatar></user-avatar>
       <div class="user-info">
         <div class="user-info__avatar"></div>
         <div class="user-info__info">
-          <p class="">User</p>
+          <p class=""><span>Super</span> <span>User</span></p>
           <p class="">Administrator</p>
         </div>
       </div>
     </div>
   </md-toolbar>
   <md-list>
+    <md-subheader class="md-no-sticky list-subheader">Common</md-subheader>
     <md-item ng-repeat="item in menu">
-      <a>
-        <md-item-content md-ink-ripple layout="row" layout-align="start center">
+      <a ui-sref="{{item.link}}">
+        <md-list-item class="menu-list-item" ng-click="null" layout="row" layout-align="start center">
           <div class="inset">
             <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
           </div>
           <div class="inset">{{item.title}}
           </div>
-        </md-item-content>
+        </md-list-item>
       </a>
     </md-item>
-    <md-divider></md-divider>
+    <md-subheader class="md-no-sticky list-subheader">Other</md-subheader>
+    <md-item ng-repeat="item in admin">
+      <a ui-sref="{{item.link}}">
+        <md-list-item class="menu-list-item" ng-click="null" layout="row" layout-align="start center">
+          <div class="inset">
+            <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+          </div>
+          <div class="inset">{{item.title}}
+          </div>
+        </md-list-item>
+      </a>
+    </md-item>
   </md-list>
 </md-sidenav>

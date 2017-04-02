@@ -1,32 +1,29 @@
 class SidebarController {
-  constructor ($scope) {
+  constructor ($scope, $ngRedux) {
+    let unsubscribe = $ngRedux.connect(this.mapStateToThis)(this)
+    $scope.$on('$destroy', unsubscribe)
     $scope.menu = [
       {
-        link: '',
+        link: 'app.dashboard',
         title: 'Dashboard',
         icon: 'dashboard'
       },
       {
-        link: '',
-        title: 'Friends',
+        link: 'app.users',
+        title: 'Users',
         icon: 'group'
-      },
-      {
-        link: '',
-        title: 'Messages',
-        icon: 'message'
       }
     ]
     $scope.admin = [
       {
-        link: '',
-        title: 'Trash',
-        icon: 'delete'
-      },
-      {
-        link: 'showListBottomSheet($event)',
+        link: 'app.settings',
         title: 'Settings',
         icon: 'settings'
+      },
+      {
+        link: 'app.profile',
+        title: 'Profile',
+        icon: 'person'
       }
     ]
     $scope.activity = [
@@ -62,8 +59,14 @@ class SidebarController {
       }
     ]
   }
+
+  mapStateToThis (state) {
+    return {
+      sidebar: state.sidebar
+    }
+  }
 }
 
-SidebarController.$inject = ['$scope']
+SidebarController.$inject = ['$scope', '$ngRedux']
 
 export default SidebarController

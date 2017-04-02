@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import { TodosReducer } from './todos.reducer'
+import { appReducer } from './reducers/app/'
 
 export const RootReducer = combineReducers({
-  todos: TodosReducer
+  app: appReducer
 })

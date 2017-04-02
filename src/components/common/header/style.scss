@@ -4,22 +4,17 @@
     background: $header !important;
     color: $header-color;
     transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 6px, rgba(0, 0, 0, 0.117647) 0 1px 4px;
   }
-
-  .sub-header {
-    background: $sub-header;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    color: $header-color;
-    .history {
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-    }
-    .help-btn {
-
+  .tools-menu {
+    .tools-menu-link {
+      color: $header-color !important;
+      height: 100%;
+      width: 100%;
     }
   }
+}
+
+.active-btn-header-language {
+  background-color: rgba(158, 158, 158, 0.4) !important;
 }

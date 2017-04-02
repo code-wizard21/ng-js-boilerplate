@@ -1,8 +1,14 @@
 import template from './index.html'
+import controller from './controller'
+import './style'
 
 let appComponent = {
+  restrict: 'EA',
+  replace: true,
+  scope: true,
   template,
-  restrict: 'E'
+  controllerAs: 'self',
+  controller
 }
 
 export default appComponent

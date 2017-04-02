@@ -1,13 +1,12 @@
 import angular from 'angular'
-import { RootReducer } from './reducers'
 
 angular
   .module('app')
-  .config(($locationProvider, $stateProvider, $urlRouterProvider, $ngReduxProvider) => {
+  .config(($locationProvider, $stateProvider, $urlRouterProvider) => {
     'ngInject'
 
-    // Define our app routing, we will keep our layout inside the app component
-    // The layout route will be abstract and it will hold all of our app views
+    $locationProvider.html5Mode(true)
+    $urlRouterProvider.otherwise('/users')
 
     $stateProvider
       .state('app', {
@@ -15,14 +14,21 @@ angular
         abstract: true,
         template: '<app></app>'
       })
-
-      // Dashboard page to contain our goats list page
-      .state('app.home', {
-        url: '/',
-        template: '<home></home>'
+      .state('app.users', {
+        url: '/users',
+        data: {name: 'Users'},
+        template: '<users></users>'
       })
-
-    $urlRouterProvider.otherwise('/')
-
-    $ngReduxProvider.createStoreWith(RootReducer)
+      .state('app.settings', {
+        url: '/settings',
+        template: '<settings></settings>'
+      })
+      .state('app.dashboard', {
+        url: '/dashboard',
+        template: '<dashboard></dashboard>'
+      })
+      .state('app.profile', {
+        url: '/profile',
+        template: '<profile></profile>'
+      })
   })

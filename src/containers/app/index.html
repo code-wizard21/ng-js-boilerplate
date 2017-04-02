@@ -1,12 +1,15 @@
-<div class="app" layout="row">
-    <sidebar></sidebar>
-    <div layout="column" class="relative" layout-fill role="main">
-        <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
-            <ng-md-icon icon="add"></ng-md-icon>
-        </md-button>
-        <header></header>
-        <md-content flex md-scroll-y>
-            <ui-view layout="column" layout-fill layout-padding></ui-view>
-        </md-content>
+<div class="app-containers" ngsf-fullscreen>
+    <div class="app" layout="row">
+        <sidebar></sidebar>
+        <div layout="column" class="relative" layout-fill role="main">
+            <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
+                <ng-md-icon icon="add"></ng-md-icon>
+            </md-button>
+            <header></header>
+            <md-content flex md-scroll-y>
+                <ui-view layout="column" layout-fill></ui-view>
+            </md-content>
+        </div>
     </div>
 </div>
+
