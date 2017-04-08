@@ -66,7 +66,7 @@ export default {
   },
   Sidebar: {
     ...COMMON,
-    BRAND_HEADER: 'NG-boilerplate',
+    BRAND_HEADER: 'NG-js-boilerplate',
     brand: 'React-boilerplate',
     generalMenuLabel: 'Common',
     moreMenuLabel: 'Other',

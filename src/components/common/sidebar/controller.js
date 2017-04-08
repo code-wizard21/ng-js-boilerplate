@@ -1,3 +1,4 @@
+/* @ngInject */
 class SidebarController {
   constructor ($scope, $ngRedux) {
     let unsubscribe = $ngRedux.connect(this.mapStateToThis)(this)
@@ -66,7 +67,4 @@ class SidebarController {
     }
   }
 }
-
-SidebarController.$inject = ['$scope', '$ngRedux']
-
 export default SidebarController

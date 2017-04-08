@@ -1,5 +1,6 @@
 import {actionToggleFullScreen} from '../../../actions/'
 
+/* @ngInject */
 class HeaderController {
   constructor ($scope, $ngRedux, $mdSidenav, $translate) {
     this.$mdSidenav = $mdSidenav
@@ -31,6 +32,4 @@ class HeaderController {
     }
   }
 }
-
-HeaderController.$inject = ['$scope', '$ngRedux', '$mdSidenav', '$translate']
 export default HeaderController

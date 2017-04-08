@@ -1,6 +1,6 @@
 import angular from 'angular'
 import {actionChangeHeaderTitlePage} from '../../../actions/'
-
+/* @ngInject */
 class UsersController {
   constructor ($scope, $mdDialog, $ngRedux) {
     this.$mdDialog = $mdDialog
@@ -22,7 +22,4 @@ class UsersController {
     )
   }
 }
-
-UsersController.$inject = ['$scope', '$mdDialog', '$ngRedux']
-
 export default UsersController

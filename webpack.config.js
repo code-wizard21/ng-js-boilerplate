@@ -1,13 +1,12 @@
 const webpack = require('webpack')
 const HappyPack = require('happypack')
 const path = require('path')
-const autoprefixer = require('autoprefixer')
+// const autoprefixer = require('autoprefixer')
 
 const sourcePath = path.join(__dirname, './src')
 const staticsPath = path.join(__dirname, './static')
 
 module.exports = function () {
-
   const nodeEnv = process.env.NODE_ENV ? 'production' : 'development'
   const isProd = nodeEnv === 'production'
 
@@ -50,7 +49,7 @@ module.exports = function () {
       context: path.join(__dirname, 'dll'),
       manifest: require('./dll/vendor_libs-manifest.json')
     })
-  ];
+  ]
   let methods = []
   if (isProd) {
     plugins.push(
@@ -66,9 +65,9 @@ module.exports = function () {
           dead_code: true,
           evaluate: true,
           if_return: true,
-          join_vars: true,
+          join_vars: true
         },
-        output: { comments: false },
+        output: { comments: false }
       })
     )
   } else { plugins.push(new webpack.HotModuleReplacementPlugin()) }
@@ -130,7 +129,7 @@ module.exports = function () {
     devServer: {
       contentBase: './',
       historyApiFallback: true,
-      port: 3001,
+      port: 3000,
       compress: isProd,
       inline: !isProd,
       hot: !isProd,

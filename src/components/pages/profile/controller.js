@@ -1,6 +1,7 @@
 import angular from 'angular'
 import {actionChangeHeaderTitlePage} from '../../../actions/'
 
+/* @ngInject */
 class ProfileController {
   constructor ($scope, $mdDialog, $ngRedux) {
     this.$mdDialog = $mdDialog
@@ -22,7 +23,4 @@ class ProfileController {
     )
   }
 }
-
-ProfileController.$inject = ['$scope', '$mdDialog', '$ngRedux']
-
 export default ProfileController

@@ -1,10 +1,10 @@
 import angular from 'angular'
 import {actionChangeHeaderTitlePage} from '../../../actions/'
 
+/* @ngInject */
 class DashboardController {
   constructor ($scope, $mdDialog, $ngRedux) {
     this.$mdDialog = $mdDialog
-
     let unsubscribe = $ngRedux.connect(null, {actionChangeHeaderTitlePage})(this)
     this.actionChangeHeaderTitlePage('Dashboard')
     $scope.$on('$destroy', unsubscribe)
@@ -23,7 +23,4 @@ class DashboardController {
     )
   }
 }
-
-DashboardController.$inject = ['$scope', '$mdDialog', '$ngRedux']
-
 export default DashboardController
