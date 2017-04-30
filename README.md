@@ -4,7 +4,9 @@
     <img src="https://travis-ci.org/CronixMicroSystems/ng-js-boilerplate.svg?branch=master" alt="Build Status" />
 </a>
 
-[![Gitter Chat](https://badges.gitter.im/owner/repo.png)](https://gitter.im/CronixMicroSystems/Lobby)
+<a href="https://gitter.im/CronixMicroSystems/Lobby">
+    <img src="https://badges.gitter.im/owner/repo.png" alt="Gitter Chat" />
+</a>
 
 ![alt text](./cronix.png)
 
