@@ -44,10 +44,6 @@ module.exports = function () {
         },
         'babel-loader?cacheDirectory'
       ]
-    }),
-    new webpack.DllReferencePlugin({
-      context: path.join(__dirname, 'dll'),
-      manifest: require('./dll/vendor_libs-manifest.json')
     })
   ]
   let methods = []
