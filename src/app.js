@@ -2,8 +2,7 @@ import angular from 'angular'
 import uiRouter from 'angular-ui-router'
 import ngRedux from 'ng-redux'
 
-import 'screenfull'
-import 'angular-screenfull'
+import 'angular-koka-fullscreen'
 import 'angular-translate'
 import 'angular-animate'
 import 'angular-aria'
@@ -24,7 +23,7 @@ angular
     ngRedux,
 
     'pascalprecht.translate',
-    'angularScreenfull',
+    'angular-koka-fullscreen',
     'ngMessages',
     'ngMaterial',
     'ngMdIcons',
